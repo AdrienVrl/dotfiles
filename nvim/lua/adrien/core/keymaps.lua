@@ -30,3 +30,4 @@ keymap.set(
 	{ desc = "Connect to remote server" }
 )
 keymap.set("n", "<leader>do", "<cmd>DistantOpen<CR>", { desc = "Open remote server home directory" })
+keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
