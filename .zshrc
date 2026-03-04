@@ -37,6 +37,13 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 HYPHEN_INSENSITIVE="false"
 COMPLETION_WAITING_DOTS="false"
 # /!\ do not use with zsh-autosuggestions
+setopt autocd
+setopt correct
+setopt auto_menu        # cycle through matches on repeated Tab presses
+setopt list_ambiguous   # list matches immediately when there's ambiguity
+setopt menu_complete    # pressing Tab cycles through matches instead of listing them
+autoload -Uz compinit
+compinit
 
 plugins=(archlinux 
 	asdf 

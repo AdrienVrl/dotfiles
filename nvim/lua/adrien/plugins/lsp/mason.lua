@@ -39,7 +39,6 @@ return {
 				"clangd",
 				"clang-format",
 				"pylsp",
-				"rust-analyzer",
 			},
 		})
 
