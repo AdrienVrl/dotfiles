@@ -37,13 +37,13 @@ return {
 				"prismals",
 				"pyright",
 				"clangd",
-				"clang-format",
 				"pylsp",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"clang-format", -- c/c++ formatter
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter

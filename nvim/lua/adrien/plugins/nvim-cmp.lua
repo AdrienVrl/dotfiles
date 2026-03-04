@@ -25,6 +25,25 @@ return {
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
 
+    -- LuaSnip jump keymaps (must be set outside cmp to work in select mode)
+    vim.keymap.set({ "i", "s" }, "<C-j>", function()
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      end
+    end, { silent = true })
+
+    vim.keymap.set({ "i", "s" }, "<C-k>", function()
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      end
+    end, { silent = true })
+
+    vim.keymap.set({ "i", "s" }, "<C-l>", function()
+      if luasnip.choice_active() then
+        luasnip.change_choice(1)
+      end
+    end, { silent = true })
+
     cmp.setup({
       completion = {
         completeopt = "menu,menuone,preview,noselect",
@@ -35,8 +54,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
+        ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions

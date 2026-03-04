@@ -26,7 +26,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set(
 	"n",
 	"<leader>dc",
-	"<cmd>DistantConnect ssh://student@es-pynq041.ics.ele.tue.nl<CR>",
+	"<cmd>DistantConnect ssh://20210792@hpc.tue.nl<CR>",
 	{ desc = "Connect to remote server" }
 )
 keymap.set("n", "<leader>do", "<cmd>DistantOpen<CR>", { desc = "Open remote server home directory" })
