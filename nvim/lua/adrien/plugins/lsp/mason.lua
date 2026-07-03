@@ -37,7 +37,6 @@ return {
 				"prismals",
 				"pyright",
 				"clangd",
-				"pylsp",
 			},
 		})
 

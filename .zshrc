@@ -146,3 +146,6 @@ unsetopt BEEP
 source <(fzf --zsh)
 
 alias fvim='nvim $(fzf -m --preview="bat --color=always {}")'
+
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+

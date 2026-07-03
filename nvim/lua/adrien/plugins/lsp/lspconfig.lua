@@ -100,8 +100,6 @@ return {
 			"graphql",
 			"emmet_ls",
 			"prismals",
-			"pylsp",
 		})
 	end,
 }
-
